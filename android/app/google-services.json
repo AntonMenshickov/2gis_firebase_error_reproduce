@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "412493164412",
+    "project_id": "smartdispatch-df6c6",
+    "storage_bucket": "smartdispatch-df6c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412493164412:android:6e2e6a390caa053b683ef9",
+        "android_client_info": {
+          "package_name": "com.groupstp.smartdispatch_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412493164412-690n3i97rjpujqhb7hepml9djjlllv7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdconfgHugzIjlDBDHLr6dJD3ccRZ8-04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412493164412-690n3i97rjpujqhb7hepml9djjlllv7m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412493164412-3t89idvkvpf8njfqab2eqrsnl8vo7etp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.groupstp.smartdispatch"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
