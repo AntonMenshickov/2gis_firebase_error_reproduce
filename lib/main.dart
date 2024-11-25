@@ -113,6 +113,32 @@ class _MyHomePageState extends State<MyHomePage> {
               zoom: sdk.Zoom(15.0)),
         ),
         controller: _mapWidgetController,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Transform.scale(
+                    scale: 1.10,
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        sdk.ZoomWidget(),
+                        Padding(
+                          padding: EdgeInsets.only(top: 8.0),
+                          child: sdk.MyLocationWidget(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
