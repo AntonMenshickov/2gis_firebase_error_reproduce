@@ -58,10 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     _markers = [];
     _mapContext = sdk.DGis.initialize(
-      logOptions: const sdk.LogOptions(
-        customLogLevel: sdk.LogLevel.error,
-        logLevel: sdk.LogLevel.error,
-      ),
+      logOptions: const sdk.LogOptions(customLevel: sdk.LogLevel.error),
       httpOptions: const sdk.HttpOptions(
         timeout: Duration(seconds: 5),
       ),
@@ -74,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
   _onMapReady(sdk.Map map) async {
     _mapObjectManager = sdk.MapObjectManager(map);
     _pointImage =
-        await _loader.loadPngFromAsset('assets/point_grey.png', 100, 100);
+        await _loader.loadPngFromAsset('assets/point_grey.png', 42, 50);
     _testPoint();
   }
 
@@ -84,25 +81,18 @@ class _MyHomePageState extends State<MyHomePage> {
     for (int i = 0; i < 100; i++) {
       _markers.add(sdk.Marker(
         sdk.MarkerOptions(
-            icon: _pointImage,
-            position: sdk.GeoPointWithElevation(
-              latitude: sdk.Latitude(58.2855 + i * 0.01),
-              longitude: sdk.Longitude(104.2890 + i * 0.01),
-            ),
-            userData: i.toString(),
-            zIndex: sdk.ZIndex(i),
-            iconWidth: const sdk.LogicalPixel(1.0)),
+          icon: _pointImage,
+          position: sdk.GeoPointWithElevation(
+            latitude: sdk.Latitude(58.2855 + i * 0.01),
+            longitude: sdk.Longitude(104.2890 + i * 0.01),
+          ),
+          userData: i.toString(),
+          zIndex: sdk.ZIndex(i),
+          iconWidth: const sdk.LogicalPixel(25.0),
+        ),
       ));
       _mapObjectManager.addObject(_markers[i]);
     }
-    print('waiting 5 seconds...');
-
-    await Future.delayed(const Duration(seconds: 5));
-    print('removing add markers');
-    for (var marker in _markers) {
-      _mapObjectManager.removeObject(marker);
-    }
-    _markers.clear();
     print('done.');
   }
 

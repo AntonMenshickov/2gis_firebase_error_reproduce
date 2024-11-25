@@ -61,10 +61,10 @@ packages:
     dependency: "direct main"
     description:
       name: dgis_mobile_sdk_full
-      sha256: d81fc6ad24c5bc86b82629be366fac9892a4db17b5ba2d6274fc8981ace2cfab
+      sha256: "150504635d0bee1e28fef749ea978e86a3adbcbb449877884feb4759df50c395"
       url: "https://pub.dev"
     source: hosted
-    version: "12.0.0-alpha.8"
+    version: "12.2.0"
   fake_async:
     dependency: transitive
     description:
@@ -94,6 +94,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
+  flutter_localizations:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_svg:
     dependency: transitive
     description:
@@ -128,6 +133,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.0"
   leak_tracker:
     dependency: transitive
     description:
